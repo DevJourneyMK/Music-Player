@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(./IMAGES/9953182.jpg);
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 110px;
+}
+
+img {
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+}
+.container {
+  width: 320px;
+  height: 420px;
+  text-align: center;
+  border: 2px solid black;
+  box-shadow: 2px 2px 20px white;
+  border-radius: 20px;
+}
+#singer,
+#song {
+  font-family: sans-serif;
+}
+#singer {
+  text-shadow: 2px 2px 20px white;
+  font-style: italic;
+}
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  font-size: 25px;
+  align-items: center;
+}
+#play
+{
+    border: 1px solid white;
+    padding: 9px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#backward, #forward{
+    cursor: pointer;
+}
+#play:hover{
+    color: black;
+    background-color: white;
+    
+}
+.progressbarcontainer{
+  width: 100%;
+  background-color: #fff; 
+  border-radius: 6px;
+  height: 5px;  
+  cursor: pointer;
+}
+.progressbar{
+  width: 0%;
+  background-color: orange;
+  height: 5px;
+  
+}
+.time{
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img {
+  transition: transform 0.5s linear;
+}
+
+img.rotating {
+  animation: rotate 5s linear infinite; /* Rotate every 5 seconds infinitely */
+}
